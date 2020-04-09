@@ -1,6 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Available Scripts 
+[![Build Status](https://travis-ci.com/vroxo/docker-react-app.svg?branch=master)](https://travis-ci.com/vroxo/docker-react-app)
 
 In the project directory, you can run:
 
