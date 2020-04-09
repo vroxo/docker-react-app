@@ -3,18 +3,18 @@ services:
   - docker
 
 before_install:
-  - docker build -t vroxo/docker-react-app -f Dockerfile.dev .
+  - docker build -t vroxo/docker-react-app .
 
 script:
-  - docker run -e CI=true vroxo/docker-react-app npm run test -- --coverage
+  - docker run -e CI=true vroxo/docker-react-app npm run test
 
 deploy:
   provider: elasticbeanstalk
-  region: "sa-east-1"
-  app: "docker-react-app"
-  env: "DockerReactApp-env"
-  bucket_bame: "elasticbeanstalk-sa-east-1-242754898733"
-  bucket_path: "docker-react-app"
+  region: "us-east-1"
+  app: "react-base-app"
+  env: "ReactBaseApp-env"
+  bucket_bame: "elasticbeanstalk-us-east-1-242754898733"
+  bucket_path: "react-base-app"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
